@@ -1,9 +1,16 @@
 $(document).ready(function() {
   $("button#hello").click(function() {
     $("ul#user").prepend("<li>Hello!</li>");
+    $("ul#user").children("li").first().click(function() {
+      alert('hi');
+    });
     $("ul#webpage").prepend("<li>Why hello there!</li>");
+    $("ul#webpage").children("li").first().click(function() {
+      alert('hi');
+    });
   });
 
+  
   $("button#goodbye").click(function() {
     $("ul#user").prepend("<li>Goodbye!</li>");
     $("ul#webpage").prepend("<li>Goodbye, dear user!</li>");
